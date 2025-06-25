@@ -1,0 +1,208 @@
+
+data types in C
+----------------------
+int
+float
+char
+double
+long
+short
+
+int a = 10;
+
+python objects
+---------------
+
+number
+-------
+number can be integer or decimal or octal or hexa.
+
+val = 10
+aval = 34.43
+
+string
+-------
+string is defined in single or double or triple quotes.
+
+aname = 'python programming'
+bname = "unix shell scrpting"
+cname = """java programming"""
+
+
+
+list ( array in C )
+------
+list contains set of elements.
+Elements can be numbers or strings or any combination.
+list is defined in []
+
+alist = [40,50,20,30]
+blist = ["java","unix",45,32]
+clist = [[30,40],[50,60]]
+
+tuple ( immutable unchangeable uneditable)
+-----
+tuples contains set of elements.
+Elements can be numbers or strings or any combination.
+tuple  is defined in ().
+*** Elements inside tuple cannot be modified directly ***
+
+alist =[10,20]
+atup = (40,50,30,40)
+btup = ("java","unix","oracle")
+ctup = ("unix",20,30,4,[30,40])
+
+
+dictionary  (  hash , hashmap  ,  json  ,   associativearray ,  pairs)
+--------------
+dictionary contains in  keys and values
+
+
+syntax:  object = { key:value , key:value , key:value}
+example:   book = {"chap1":10, "chap2":20 , "chap3":30 }
+        bookinfo= {"chap1":["rita","US"], "chap2":["sita","UK"]  }
+          numbers= {1:2,3:4,5:6}
+Index
+-------
+chap1   10
+chap2   20
+chap3   30
+chap4   40
+chap5   40
+
+
+set ( venn diagrams)
+--------------------------
+set is UNORDERED collection of UNIQUE items of same type.
+
+
+aset = {10,10,10,20,30,30,30}
+
+
+
+
+
+for ( i = 1 ; i <=10 ;i++)
+{
+
+}
+
+
+functions
+---------------
+- builtin functions
+- user defined functions
+
+
+how to display all the built functions?
+----------------------------------------------
+print(dir(__builtins__))
+
+
+
+
+user defined function | definition | block | subroutine | function
+------------------------------------------------------------------
+- reusability purpose
+
+
+def display():
+    ####
+    ####
+
+display()
+
+passing arguments 
+-------------------
+fixed arguments
+default arguments
+keyword arguments
+variable length arguments
+
+
+file handling
+----------------------
+txt
+csv
+log 
+xlsx
+docx
+pptx
+prop 
+.conf
+exe 
+bat 
+tsv 
+json
+yaml
+zip 
+rar
+tar
+.tar.gz
+.gz
+7z
+mp3
+mp4
+jpeg
+dat 
+mkv 
+png 
+jpeg
+gif
+pdf
+
+
+working with flat files  ( txt csv  conf  log   json yaml )
+
+working with third party files  (xlsx docx  7z  mp4 pdf )
+
+
+#include<stdio.h>
+#include<conio.h>
+#include<math.h>
+#include<vector.h>
+#include<string.h>
+#include<datetime.h>
+#include<time.h>
+#include<stdmanip>
+#include<graphics.h>
+
+
+
+
+www.pypi.org   -----> 650000+ libraries 
+
+
+
+opening the file
+-------------------
+read mode 
+write mode 
+append mode
+
+syntax:  object = open(filename, mode)
+example:   fobj = open("hello.txt","r")
+           # file should exist to open the file
+
+           fobj = open("hello.txt","w")
+           case1 : If the file is not existing .. file gets created
+           case2 : if hte file is already existing.. it overwrites
+
+           fobj = open("hello.txt","a")
+           case1 : If the file is not existing .. file gets created
+           case2 : if the file is already existing.. it appends the new content
+           
+
+
+closing the file 
+----------------------
+fobj.close()
+
+
+ read operation 
+ ------------------
+ 1. reading the file line by line using file object
+ 2. fobj.readlines()
+ 3. fobj.read()
+ 4. using csv library
+ 5. using pandas library 
