@@ -1,0 +1,718 @@
+
+
+
+# p   y    t    h     o   n        p    r    o    g   r   a   m   m   i   n   g
+# 0   1    2    3     4   5   6    7    8    9
+# -18                                                           -5  -4   -3   -2  -1
+name = "python programming"
+# slicing
+#string[start:stop:step]
+print(name[0])
+print(name[0:4])
+print(name[0:4:2])
+print(name[::])
+print(name[:])
+print(name[::3]) #ph
+print("output:",name[-23:])
+print(name[::-1])
+
+
+print(name[::])
+print(name[0:18:1])
+print(name[::-1])
+
+name = "python programming"
+print(name.capitalize())
+print(name.title())
+print(name.replace("python","ruby"))
+print(name.split(" "))
+print(name.count("p"))
+print(name.count("q"))
+print(name.endswith("g"))
+print(name.endswith("q"))
+print(name.startswith("p"))
+print(name.startswith("a"))
+print(name.find("min"))  # if substring if returns the starting index of it.
+print(name.find("abc"))  # if not found.. it returns -1
+print(name.isalpha())
+print(name.isalnum())
+print(name.isupper())
+print(name.islower())
+aname = "  python "
+print(len(aname))
+print(len(aname.strip())) # remove whitespaces at both ends
+print(len(aname.lstrip()))
+print(len(aname.rstrip()))
+name = "I love {} and {}"  # template
+print(name.format("python","java"))
+print(name.format("hyderabad","Bangalore"))
+
+str1 = "python"
+str2 = "programming"
+finalstring = str1 + " " + str2
+print(finalstring)
+
+name = "python"
+print(name.encode("utf-32"))
+
+
+
+
+
+
+
+# conditions
+if 1 < 2:
+    print("true")
+
+if name.isupper():
+    print("string is upper")
+
+if name.startswith("p"):
+    print("its python")
+
+
+
+# if-else
+if name.isupper():
+    print("string is upper")
+    print("inside if")
+    print("still inside if")
+else:
+    print("string is lower")
+
+
+
+
+
+
+
+
+
+
+alist = [10,45,56,32,67,3,82,49]
+
+alist.append(90)
+print("After appending:",alist)
+alist.extend([93,18,61])
+print("After extending:",alist)
+alist.insert(0,100)   #list.insert(index,value)
+print("After inserting:",alist)
+alist.pop(3)  #list.pop(index)  # you are suppposed to pass index
+print("After pop operation :",alist)
+alist.remove(82)  # list.remove(value)
+print("After removing :",alist)
+alist.reverse()
+print("After reversing:",alist)
+alist.sort()
+print("After sorting :",alist)
+alist.sort(reverse=True)
+print("After sorting :",alist)
+
+
+
+
+
+
+
+
+book = {"chap1":10 ,"chap2":20 ,"chap3":30}
+print(book)
+# add new key-value pairs
+book["chap4"] = 40
+book["chap5"] = 50
+book["chap6"] = 60
+print(book)
+# print individual value
+print(book["chap1"])
+print(book["chap2"])
+# dissplay keys
+print(book.keys())
+# display values
+print(book.values())
+# display itms
+print(book.items())
+
+book.pop("chap1") #chap1-10 will be removed from dict
+print(book)
+
+book.popitem()  # will remove last inserted key value
+book.popitem()
+print(book)
+
+# combining two dictionaries
+newbook= {"chap7":70 ,"chap8":80}
+print(newbook)
+finalbook = {**book, **newbook}
+print(finalbook)
+
+book.update(newbook)
+print("updated book:", book)
+
+
+
+# display keys
+for key in book.keys():
+    print(key)
+
+# display values
+for value in book.values():
+    print(value)
+
+for k,v in book.items():
+    print(k,v)
+    
+    
+    
+    
+
+################################# dictionary tasks #######################
+
+
+
+colors = [
+{
+"colors": "red",
+"values": "#f00"
+},
+{
+"colors": "green",
+"values": "#0f0"
+},
+{
+"colors": "blue",
+"values": "#00f"
+},
+{
+"colors": "cyan",
+"values": "#0ff"
+},
+{
+"colors": "magenta",
+"values": "#f0f"
+},
+{
+"colors": "yellow",
+"values": "#ff0"
+},
+{
+"colors": "black",
+"values": "#000"
+}
+]
+
+write a program to display all the colors and its values.
+
+sample output :
+
+red #f00
+green #0f0
+yellow  #ff0
+magenta #f0f
+..
+..
+..
+
+########################################
+
+products = [
+    {"id": 101, "name": "Laptop", "price": 75000},
+    {"id": 102, "name": "Mobile", "price": 25000},
+    {"id": 103, "name": "Tablet", "price": 15000}
+]
+Write a program to display all employee names and their departments.
+
+employees = {
+    "E001": {"name": "Alice", "department": "Finance"},
+    "E002": {"name": "Bob", "department": "IT"},
+    "E003": {"name": "Charlie", "department": "HR"}
+}
+
+
+sample output:
+
+Alice  Finance
+Bob    IT
+
+
+########################################
+
+Write a program to print all product names and prices.
+
+products = [
+    {"id": 101, "name": "Laptop", "price": 75000},
+    {"id": 102, "name": "Mobile", "price": 25000},
+    {"id": 103, "name": "Tablet", "price": 15000}
+]
+
+
+
+########################################
+
+Write a program to show student names with grades.
+
+students = [
+    {"id": 1, "name": "John", "marks": {"math": 80, "science": 75}},
+    {"id": 2, "name": "Jane", "marks": {"math": 90, "science": 85}}
+]
+
+
+########################################
+
+Write a program to print team names and player names.
+
+teams = {
+    "TeamA": [
+        {"name": "Alice", "role": "Batsman"},
+        {"name": "Bob", "role": "Bowler"}
+    ],
+    "TeamB": [
+        {"name": "Charlie", "role": "Allrounder"},
+        {"name": "Dave", "role": "Wicketkeeper"}
+    ]
+}
+
+
+sample output:
+
+TeamA
+-----
+Alice
+Bob
+
+TeamB
+-----
+Charlie
+Dave
+
+
+########################################
+
+write a program to read the below dictionary and display the expected output
+
+info = {
+"id": "0001",
+"type": "donut",
+"name": "Cake",
+"image":
+{
+"url": "images/0001.jpg",
+"width": 200,
+"height": 200
+},
+"thumbnail":
+{
+"url": "images/thumbnails/0001.jpg",
+"width": 32,
+"height": 32
+}
+}
+
+
+sample output:
+
+ID              : 0001
+TYPE            : donut
+NAME            : Cake
+IMAGE URL       :"images/0001.jpg
+IMAGE WIDTH     : 200
+IMAGE HEIGHT    : 200
+THUMBNAIL URL   : "images/thumbnails/0001.jpg"
+THUMBNAIL WIDTH : 32
+THUMBNAIL HEIGHT:  32
+
+
+########################################
+
+data = {
+    'Sales': {
+        'North': {
+            'Alice': 'Manager',
+            'Bob': 'Sales Executive',
+            'Eve': 'Sales Coordinator',
+            'John': 'Account Manager'
+        },
+        'South': {
+            'Charlie': 'Sales Executive',
+            'Grace': 'Regional Sales Manager',
+            'Mallory': 'Business Development Associate'
+        },
+        'West': {
+            'Oscar': 'Sales Executive',
+            'Peggy': 'Account Executive',
+            'Victor': 'Territory Sales Manager'
+        }
+    },
+    'Marketing': {
+        'Digital': {
+            'David': 'SEO Specialist',
+            'Hannah': 'Content Strategist',
+            'Irene': 'Social Media Manager'
+        },
+        'Offline': {
+            'Eve': 'Event Coordinator',
+            'Jake': 'Brand Manager',
+            'Liam': 'Public Relations Specialist'
+        },
+        'Research': {
+            'Mia': 'Market Research Analyst',
+            'Noah': 'Customer Insights Manager'
+        }
+    },
+    'IT': {
+        'Infrastructure': {
+            'Quinn': 'Network Engineer',
+            'Riley': 'System Administrator',
+            'Sam': 'Cloud Architect'
+        },
+        'Development': {
+            'Tina': 'Software Engineer',
+            'Uma': 'Backend Developer',
+            'Walter': 'Full Stack Developer'
+        }
+    },
+    'HR': {
+        'Recruitment': {
+            'Yara': 'Recruitment Specialist',
+            'Zane': 'Talent Acquisition Manager',
+            'Nina': 'HR Coordinator'
+        },
+        'Employee Relations': {
+            'Oliver': 'Employee Relations Specialist',
+            'Sophia': 'HR Business Partner'
+        }
+    },
+    'Finance': {
+        'Accounting': {
+            'Xander': 'Accountant',
+            'Yvette': 'Accounts Payable Specialist',
+            'Zara': 'Financial Analyst'
+        },
+        'Audit': {
+            'Luna': 'Internal Auditor',
+            'Mason': 'Compliance Officer'
+        }
+    }
+}
+
+
+write a program to display the below output:
+
+
+Sales
+-----
+North
+South
+West
+
+
+Marketing
+--------
+Digital
+Offline
+Research
+
+
+IT
+---
+Infrasturcture
+Development
+
+HR
+---
+Recruitment
+Employee Relations
+
+
+
+########################################
+
+
+# dipslay all buildin exceptions and functions
+print(dir(__builtins__))
+
+#print(0)
+print("python")
+
+#len()
+alist = [10,20,30]
+print(len(alist))
+
+book = {"chap1":10,"chap2":20,"chap3":30}
+print(len(book))
+
+#input()
+name = input("Enter any name :")
+print(name)
+
+#max()
+print(max(alist))
+#min()
+print(min(alist))
+#sum()
+print(sum(alist))
+
+#id() - memmory reference of object
+name = 'python'
+print(id(name))
+alist = [10,20,30]
+print(id(alist))
+
+
+
+
+
+
+# typecasting functions - converting from one object to another object
+# str()   int()    list()   tuple()   set()    dict()   oct()  hex()
+
+val = 1
+valstr = str(val)    # number to string
+print(type(valstr))
+
+alist = [10,20,30]
+print(tuple(alist))   # list to tuple
+
+atup = (40,50,50)
+alist = list(atup)    # tuple to list
+
+name = 'python'
+output = list(name)
+print(output)
+
+
+alist = [10,20,30,30,30,30,30,30,20,20,20]
+print(set(alist))
+
+
+
+
+alist = [10,20,30,30,30,30,30,30,20,20,20]
+print(set(alist))
+
+
+mydict = dict()
+print("empty dictionary", mydict)
+
+# create dictionary from list of tuples
+pairs = [('a',1),('b',2),('c',3)]
+print(dict(pairs))
+
+
+data = dict(chap1=10,chap2=20,chap3=30)
+print(data)
+
+keys= ["chap1","chap2","chap3"]
+values=[10,20,30]
+data = dict(zip(keys,values))
+print(data)
+
+data = list(zip(keys,values))
+print(data)
+
+
+string1 = "ABC"
+string2 = "123"
+output = list(zip(string1,string2))
+print(output)
+
+
+
+
+
+
+
+
+
+
+
+# fixed arguments
+def display(a,b):
+    print(a,b)
+display(10,20)
+
+# default arguments
+def display(a = 0,b = 0,c = 0,d = 0):
+    print(a,b,c,d)
+display()
+display(10)
+display(10,20)
+display(10,20,30)
+display(10,20,30,40)
+
+# keyword arguments
+def display(c,b,a):
+    print(a,b,c)
+display(b=20,a=10,c=30)
+
+#variable length arguments
+
+def display(*args):
+    for i in args:
+        print(i)
+display(10,20,30,40,50,60,70,80,90,100,56,43,5,4,5,3,5,43,4,56,3,45,3,644,23,5,43,4,3,35)
+
+
+
+
+################lambda functions #######################
+
+def display(a,b):
+    c = a + b
+    return c
+total = display(10,20)
+print(total)
+
+# lambda function
+# lambda is the replacement of single liner function
+# syntax
+#functioname = lambda variables : expression
+display = lambda a,b : a + b
+total = display(10,20)
+print(total)
+
+length = lambda s : len(s)
+print(length("python"))
+
+upper = lambda s: s.upper()
+print(upper("hello"))
+
+upper = lambda s: s.upper()
+print(upper("hello"))
+
+maximum = lambda a, b: a if a > b else b
+print(maximum(10, 20))  # 20
+
+age_check = lambda age: "Adult" if age >= 18 else "Minor"
+print(age_check(17))  # Minor
+
+
+
+
+
+result = lambda marks : "pass" if marks >=35 else "Faail"
+print(result(30))
+
+
+result = lambda marks : 'A' if marks >=90 else 'B' if marks>=75 else 'C'
+print(result(80))
+
+
+alist = [10,20,30,40]
+blist = []
+#output: [15,25,35,45]
+for val in alist:
+    blist.append(val + 5)
+print(blist)
+
+#map(function,iterable)
+alist = [10,20,30,40]
+print(list(map(lambda x:x+5 , alist)))   #[15,25,35,45]
+
+
+
+floats = [2.5, 3.6, 4.1]
+ints = list(map(lambda x: int(x), floats))
+print(ints)
+
+
+
+names = ["alice", "bob", "carol"]
+upper_names = list(map(lambda x: x.upper(), names))
+print(upper_names) 
+
+
+
+names = ["alice", "bob", "carol"]       #[5,3,5]
+upper_names = list(map(lambda x: len(x), names))
+print(upper_names) 
+
+
+data = {"a":1,"b":2,"c":3}
+
+newdata = dict(map(lambda item : (item[0].upper(), item[1]) ,data.items()) )
+print(newdata)
+
+
+# dict(map(function,iterable))
+# dict(map(lambdafnction, data.items()))
+#dict(map(lambdafunction,[('a',1),('b',2)]))
+#dict(map(lambda item : ( item[0].upper() , item[1]),[('a',1),('b',2)]))
+
+
+
+
+
+
+
+
+
+
+
+#fobj = open("C:\\new\\data.txt","w")
+#fobj = open("C:/new/data.txt","w")
+#fobj = open(r"C:\new\data.txt","w")  #  raw string
+fobj = open("data.txt","w")
+
+fobj.write("python\n")
+fobj.write("unix\n")
+fobj.writelines(["java","spark","pyspark"])
+
+
+for val in range(1,10):
+    fobj.write(str(val) + "\n")
+
+fobj.close()
+
+
+
+
+
+
+
+# pythonic way
+# context manager
+# If any line starts with keyword with ... it is called context manager
+# Advantage :  file gets closed automatially  when it comes out of indentation
+filename = input("Enter any filename :")
+with open(filename,"w") as fobj:
+    fobj.write("python\n")
+    fobj.writelines(["abc","def"])
+    print(fobj.closed)
+
+print(fobj.closed)
+
+
+
+
+
+
+#method1
+# fobj acts like an handler or pointer for nagivating
+with open("data.txt","r") as fobj:
+    for line in fobj:
+        line = line.strip()
+        print(line)
+
+#method2   fobj.readlines ----------> list
+with open("data.txt","r") as fobj:
+    print(fobj.readlines())
+
+#method3 fobj.read()  ------> single string
+# not suggested for larger files
+with open("data.txt","r") as fobj:
+    print(fobj.read())
+
+# method4 - using csv library
+import csv
+with open("data.txt","r") as fobj:
+    reader = csv.reader(fobj) # converting file object to csv object
+    for line in reader:
+        print(line)
+
+#method5 using pandas 
+import pandas
+df = pandas.read_csv("data.txt",header=None)
+print(df)
+
+
