@@ -716,3 +716,361 @@ df = pandas.read_csv("data.txt",header=None)
 print(df)
 
 
+
+
+
+
+
+
+
+
+https://github.com/giridhar276/mm1/blob/main/employee.csv
+
+
+############################## file handling #######################################
+
+
+write a proram to read employee.csv file  and dipslay workclass and education columns only.
+
+####################################################################################
+
+write a proram to read employee.csv file and display all the UNIQUE workclasses.
+
+ State-gov
+ Self-emp-not-inc
+ Private
+ Federal-gov
+ ..
+ ..
+ ..
+
+
+
+
+# unique workclasses
+import csv
+workset = set()
+with open("employee.csv","r") as fobj:
+    dummy = fobj.readline()
+    reader = csv.reader(fobj) # converting file object to csv object
+    #processing
+    for line in reader:
+        workclass = line[1]
+        workset.add(workclass)
+    # displaying output
+    for work in workset:
+        print(work)
+#########################################################################################
+import csv
+workdict  = dict()
+with open("employee.csv","r") as fobj:
+    dummy = fobj.readline()
+    reader = csv.reader(fobj) # converting file object to csv object
+    #processing
+    for line in reader:
+        workclass = line[1]
+        workdict[workclass] = 1   # { "private":1 , "public":1 ,"self-employeed":1}
+    # displaying output
+    for work in workdict:
+        print(work)
+
+
+
+
+####################################################################################
+write a proram to read employee.csv file and display the below output.
+
+Total Male count   : xxxx
+Total female count : xx
+
+
+
+
+import csv
+mcount = 0
+fcount = 0
+workdict  = dict()
+with open("employee.csv","r") as fobj:
+    dummy = fobj.readline()
+    reader = csv.reader(fobj) # converting file object to csv object
+    #processing
+    for line in reader:
+        gender = line[9].strip()
+        if gender == "Male":
+            mcount+=1
+        elif gender  == "Female":
+            fcount+=1
+    print("Total male count :", mcount)
+    print("Total female count:",fcount)
+
+
+
+
+
+
+import csv
+mcount = 0
+fcount = 0
+ismale = lambda g : g == "Male"
+isfemale = lambda g: g== "Female"
+workdict  = dict()
+with open("employee.csv","r") as fobj:
+    dummy = fobj.readline()
+    reader = csv.reader(fobj) # converting file object to csv object
+    #processing
+    for line in reader:
+        gender = line[9].strip()
+        if ismale(gender):
+            mcount+=1
+        elif isfemale(gender):
+            fcount+=1
+    print("Total male count :", mcount)
+    print("Total female count:",fcount)
+
+####################################################################################
+
+
+
+
+
+import csv
+
+try:
+    with open("employee.csv","r") as fobj:
+        reader = csv.reader(fobj) # converting file object to csv object
+        for line in reader:
+            print(line)
+except Exception as err:
+    print("file is not found.. please check")
+    print("system generated error :",err)
+    
+    
+    
+    
+    
+    
+    
+    
+import csv
+import sys
+try:
+    with open("employee11111.csv","r") as fobj:
+        reader = csv.reader(fobj) # converting file object to csv object
+        for line in reader:
+            print(line)
+except TypeError as err:
+    print(err)
+    print(sys.exc_info())
+except ValueError as err:
+    print(err)
+    print(sys.exc_info())
+except (IndexError,KeyError) as err:
+    print(err)
+    print(sys.exc_info())
+except FileNotFoundError as err:
+    print(err)
+    print(sys.exc_info())
+except Exception as err:
+    print("system generated error :",err)
+    print(sys.exc_info())
+
+
+
+
+
+
+
+
+import sys
+fobj= None
+
+try:
+    fobj = open("employee.csv","r")
+
+except Exception as err:
+    print(err)
+    print(sys.exc_info())
+
+else:
+    for line in fobj:
+        print(line)
+
+finally:
+    if fobj is not None:
+        fobj.close()
+
+
+
+
+
+
+
+
+
+
+
+#method1 : all the methods of library are imported to your program
+import math
+print(math.cos(1))
+print(math.log(1))
+
+
+#method2 : using alias name 
+import math as m
+print(m.sin(1))
+print(m.log(1))
+
+
+#method3 : importing required methods only
+from math import log,tan
+print(log(1))
+print(tan(2))
+
+
+
+
+
+
+
+
+
+
+################################### frequently used builtin libraries #############################
+
+os         : os level activities
+math       : mathematical operations
+sys        :  sys and python config data
+shutil     : copy,move, rmtree  etc
+urllib     : read the web, downloading the files
+logging    : logging all the events
+smtplib    : sending the mails
+ftplib     : performing ftp operations
+sysconfig  :  sys and python config data
+zipfile    : create/extract the zip files
+rarfile    : create/extract the rar files
+cryptopgraphy : encrypting and decrypting the data or files
+tarfile    : create/extract the tar files
+filecmp    : comparing files or directories
+sqlite3    : python default database
+csv        : reading/writing csv files
+xml        : reading/writing xml files
+calendar   : display month,year calendar info
+datetime   : working with date n time
+time       : working with date n time
+fractions  : working with decimal values
+glob       : display all the files
+heapq      : more of array operations ( getting largest among list )
+subprocess : executing system commands in python (  subprocess.getoutput("ls -ltr")
+pdb        : python debugger
+platform   : platform information
+random     : random operations ( shuffling , random digit ... )
+re         : grep + awk + sed
+socket     : networking programming
+stat       : stats of the file
+statistics : basic statistics
+pathlib	   : Object-oriented file path operations
+time	     : Delays, timestamps, performance checks
+logging	   : Logging for scripts/apps (replace print for real apps)
+argparse	 : Command-line interface (CLI) argument parsing
+configparser : 	Read/write .ini config files
+json	     :Serialize/deserialize JSON (common in APIs)
+uuid	     : Generate unique IDs (useful in files, databases)
+statistics	:Basic stats: mean, median, stdev
+random	    :Random number generation, sampling
+collections	:Specialized containers (defaultdict, Counter, namedtuple)
+traceback	   :Print/format exception tracebacks
+warnings	   :Raise and handle warnings
+
+
+
+
+
+######################################################################################
+write a program to display all the files and directories from current directory line by line
+
+######################################################################################
+
+
+write a progarm to display all the files and directories from C:
+
+
+
+######################################################################################
+
+
+write a program to delete all the .xlsx files from current directory
+
+
+
+######################################################################################
+
+write a script to create 10 directories in the current directory as below.
+
+dir1
+dir2
+dir3
+dir4
+..
+..
+dir10
+
+
+
+######################################################################################
+
+write a script to perform the below operations :
+
+1. display current working directory
+2. display login name
+3. display all environment variables
+4. display today's date ( timestamp )
+5. display May months calendar
+6. display all .py files and its size in bytes
+7. display the modified time of employees.csv file
+8. display current process id
+
+
+
+
+######################################################################################
+
+write a script to display the below information 
+
+1. CPU percentage
+2. Memory info ( total memory, available, used)
+3. process info
+4. disk partitions
+5. network statistics
+4. platform details ( like OS name , model , python version)
+5. boot time of your system
+6. IP Address of your system
+7. hostname of the system
+
+######################################################################################
+
+
+
+
+######################################################################################
+
+
+
+
+######################################################################################
+
+
+
+
+######################################################################################
+
+
+
+
+
+######################################################################################
+
+
+
+
+
+
