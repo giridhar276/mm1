@@ -101,7 +101,7 @@ print(dir(__builtins__))
 
 
 
-user defined function | definition | block | subroutine | function
+user defined function | definition | block | subroutine | function | submodule
 ------------------------------------------------------------------
 - reusability purpose
 
@@ -173,6 +173,9 @@ working with third party files  (xlsx docx  7z  mp4 pdf )
 www.pypi.org   -----> 650000+ libraries 
 
 
+task =     core programming       +       libraries        +       domain expertise
+           ( procedural or oop)
+
 
 opening the file
 -------------------
@@ -206,3 +209,152 @@ fobj.close()
  3. fobj.read()
  4. using csv library
  5. using pandas library 
+
+
+
+operators 
+-------------
+
+Arithmetic operators :  + * -  %  /
+
+relationl operators  :   <    <=   >      >=    ==    !=
+
+logical operators   :  and     or    not
+                       
+name = "python"
+if name.isupper()   and len(name) == 6 :
+    # do something
+
+assignmnet operators
+--------------------------
+val = 10
+val = val + 1     (or)  val+=1
+val = val -1     (or)  val-=1
+
+
+
+bitwise operators
+-----------------
+bitwise and      &
+bitwise or       |
+bitwise XOR      a ^ b
+left shift        a<<1
+
+
+
+exception handling 
+------------------------
+There are 2 types of errors
+
+1. syntax error
+2. semantic error or runtime error or logical error
+
+Handling the errors that occurs during runtime is known as exception handling.
+
+
+try
+except
+else 
+finally
+raise
+
+
+
+
+libraries 
+-----------
+
+builtin libraries 
+
+
+third party libraries : depending on the requirement developer has to install the third party library from www.pypi.org.
+
+
+Installing third party library
+-----------------------------------
+pip install pandas
+
+
+
+
+
+
+linux / windows command prompt
+----------------------------------------------
+list all the files:   ls/dir
+os.listdir()
+
+
+
+delete a file     :  rm
+os.remove("abc.txt")
+os.rmdir() ---> will delete empty dir
+-----------------------------
+
+display timestamp : date 
+
+import datetime
+print(datetime.datetime.now())
+print(datetime.date.today())
+
+-----------------------------------------
+shutil.rmtree(path)   -----> rm -rf
+
+----------------------------------------
+
+copy files 
+shutil.copy(file,desnation)
+shutil.move(file,destination)
+----------------------------------------
+
+psutil
+------
+cpu utliazation
+disk usage 
+memory utlization 
+
+
+
+######################################
+# We do not install any packages in global spaces
+#######################################
+
+
+virtual enviornements
+----------------------
+
+
+step1: create virtual environement 
+----------------------------------
+python -m venv myenv1
+
+step2: activate virtual environement
+----------------------------------
+windows:  .\myenv1\Scripts\activate
+linux :  source ./myenv1/bin/activate
+
+step3: deactivate your environment
+-----------------------------------
+deactivate
+
+
+
+
+
+There are 3 libraries to create virtual enviornements
+--------------------------------------------------------
+1. venv    ( default)
+--------------------
+Advantage:  easy to use and implement
+Disdadvantage:  stick to global version of python
+
+2. virtualenv    ( third party library)
+-----------------------------------------
+Advantage :  create multiple versions of python in virtual environments
+global : 3.11.3
+------------
+virtual env1 : 3.13.3
+virtual env2 : 3.12.9
+
+
+3. conda          ( third party library)
