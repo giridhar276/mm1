@@ -1,0 +1,7 @@
+python,1
+unix,2
+java,3
+oracle,4 
+ml,5
+genai,6
+pega,7
